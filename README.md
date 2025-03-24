@@ -1,6 +1,6 @@
 # Railway Reservation System
 class RailwayReservationSystem:
-    def __init__(self, total_seats):
+    def _init_(self, total_seats):
         self.total_seats = total_seats
         self.available_seats = [True] * total_seats  # Array for seat availability
         self.reservations = ReservationQueue()  # Queue for ticket bookings
@@ -56,7 +56,7 @@ class RailwayReservationSystem:
 
 
 class ReservationQueue:
-    def __init__(self):
+    def _init_(self):
         self.queue = []
 
     def enqueue(self, reservation):
@@ -79,7 +79,7 @@ class ReservationQueue:
 
 
 class Waitlist:
-    def __init__(self):
+    def _init_(self):
         self.head = None
 
     def add_passenger(self, passenger_name):
@@ -114,13 +114,13 @@ class Waitlist:
 
 
 class WaitlistNode:
-    def __init__(self, passenger_name):
+    def _init_(self, passenger_name):
         self.passenger_name = passenger_name
         self.next = None
 
 
 class UndoStack:
-    def __init__(self):
+    def _init_(self):
         self.stack = []
 
     def push(self, booking):
